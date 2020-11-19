@@ -18,7 +18,8 @@ class PageViewController: UIPageViewController {
         let board = UIStoryboard(name: "Main", bundle: nil)
         let blue = board.instantiateViewController(withIdentifier: "blue")
         let red = board.instantiateViewController(withIdentifier: "red")
-        self.views = [blue, red]
+        let green = board.instantiateViewController(identifier: "green")
+        self.views = [blue, red, green]
 
         // Do any additional setup after loading the view.
         self.delegate = self
@@ -42,19 +43,22 @@ extension PageViewController: UIPageViewControllerDelegate {
 
 extension PageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController == views[0] {
-            return nil
+        guard let index = views.firstIndex(of: viewController) else { return nil }
+        if index > 0 {
+            return views[index - 1]
         } else {
-            return views[0]
+            return nil
         }
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if viewController == views[1] {
+        guard let index = views.firstIndex(of: viewController) else { return nil }
+        if index >= views.count-1 {
             return nil
         } else {
-            return views[1]
+            return views[index+1]
         }
+        
     }
 
     func pageViewControllerSupportedInterfaceOrientations(_ pageViewController: UIPageViewController) -> UIInterfaceOrientationMask {

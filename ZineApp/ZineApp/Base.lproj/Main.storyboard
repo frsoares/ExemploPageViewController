@@ -44,12 +44,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjA-cv-baa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261" y="81"/>
+            <point key="canvasLocation" x="2259" y="70"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qh7-rd-Sem">
+            <objects>
+                <viewController storyboardIdentifier="green" id="b2h-Yq-huS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Hw-Ce-lse">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dee-xT-DXs"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNd-ja-ggv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2942" y="70"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
